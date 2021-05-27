@@ -1,0 +1,22 @@
+.page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__header,
+  &__footer{
+    flex-shrink: 0;
+  }
+
+  &__main{
+    flex-grow: 1;
+  }
+
+  &__articles-grid{
+    margin-bottom: 5rem;
+
+    @include media(">=md"){
+      margin-bottom: 8rem;
+    }
+  }
+}

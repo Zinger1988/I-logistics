@@ -1,0 +1,83 @@
+.socials{
+
+  &__title{
+    font: 600 1.3rem/1.571 $headings-font-family;
+    margin: 0 0 .7857em;
+
+    @include media(">=sm"){
+      font-size: 1.4rem;
+    }
+  }
+
+  &__holder{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 3px;
+    overflow: hidden;
+
+    @include media(">=md"){
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__item{
+    font: 700 1.1rem/1 $headings-font-family;
+    text-transform: uppercase;
+    padding: 1.2307em;
+    display: grid;
+    grid-template-columns: min-content  auto;
+    grid-gap: 0 1.307em;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    @include animate(background-color);
+
+    @include media(">=sm"){
+      font-size: 1.2rem;
+    }
+
+    @include media(">=md"){
+      font-size: 1.3rem;
+    }
+
+    &--fb{
+      color: $white;
+      background-color: #3B5998;
+
+      &:hover{
+        background-color: darken(#3B5998,10%);
+      }
+    }
+
+    &--twitter{
+      color: $white;
+      background-color: #1DA1F2;
+
+      &:hover{
+        background-color: darken(#1DA1F2,10%);
+      }
+    }
+
+    &--telegram{
+      color: $white;
+      background-color: #009BCC;
+
+      &:hover{
+        background-color: darken(#009BCC,10%);
+      }
+    }
+
+    &--viber{
+      color: $white;
+      background-color: #665CAC;
+
+      &:hover{
+        background-color: darken(#665CAC,10%);
+      }
+    }
+  }
+
+  &__item-icon{
+    font-size: 1.538em;
+  }
+}

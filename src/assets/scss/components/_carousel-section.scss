@@ -1,0 +1,82 @@
+.carousel-section{
+
+  &__title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    @include media(">=lg"){
+      margin-bottom: 5.8rem;
+    }
+  }
+
+  &__heading{
+    flex-grow: 1;
+    font-size: 2.4rem;
+    margin: 0 2rem;
+    font-weight: 600;
+
+    @include media(">=md"){
+      font-size: 2.8rem;
+      text-align: center;
+
+      &::after{
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @include media(">=lg"){
+      font-size: 3.6rem;
+    }
+  }
+
+  &__carousel-btn{
+    @extend %buttonreset;
+    width: 4.2rem;
+    height: 4.2rem;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid rgba($regalGlue,.1);
+    font-size: 1.2rem;
+    color: $regalGlue;
+    @include animate(background-color border);
+
+    @include media(">=md"){
+      width: 6.4rem;
+      height: 6.4rem;
+      line-height: 6rem;
+      font-size: 1.6rem;
+    }
+
+    &:hover{
+      background-color: rgba($regalGlue,.1);
+      border: 1px solid transparent;
+    }
+  }
+
+  &__swiper{
+    margin: 0 -5px;
+    padding: 3px 0 12px;
+    overflow: hidden;
+
+    @include media(">=lg"){
+      margin: 0 -15px;
+    }
+
+    .swiper-slide{
+      padding: 0 10px;
+      height: auto;
+      display: flex;
+
+      @include media(">=lg"){
+        padding: 0 15px;
+      }
+    }
+  }
+
+  .swiper__article-card{
+    width: 100%;
+  }
+}

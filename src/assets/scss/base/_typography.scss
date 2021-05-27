@@ -1,0 +1,189 @@
+// Typography
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading{
+  font-family: $headings-font-family;
+  font-weight: 500;
+  color: $headings-color;
+}
+
+.heading--lined{
+  position: relative;
+  text-align: center;
+
+  @include media(">=md"){
+    text-align: left;
+  }
+
+  &::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 3.5rem;
+    height: 2px;
+    background-color: $lightningYellow;
+
+    @include media(">=md"){
+      width: 5rem;
+      left: 0;
+      transform: translateX(0);
+    }
+  }
+
+  &.heading--lvl-1{
+    padding-bottom: .8157em;
+  }
+
+  &.heading--lvl-2{
+    padding-bottom: .857em;
+  }
+
+  &.heading--lvl-3,
+  &.heading--lvl-4{
+    padding-bottom: 1em;
+  }
+}
+
+h1,
+.heading--lvl-1{
+  font-size: $h1-font-size;
+  margin: 0.407em 0 .8157em;
+}
+
+h2,
+.heading--lvl-2{
+  font-size: $h2-font-size;
+  margin: .857em 0;
+}
+
+h3,
+.heading--lvl-3{
+  font-size: $h3-font-size;
+}
+
+h4,
+.heading--lvl-4{
+  font-size: $h4-font-size;
+}
+
+h5,
+.heading--lvl-5{
+  font-size: $h5-font-size;
+}
+
+h6,
+.heading--lvl-6{
+  font-size: $h6-font-size;
+}
+
+h1,
+h2,
+.heading--lvl-1,
+.heading--lvl-2{
+  line-height: 1.255;
+}
+
+h3,
+h4,
+.heading--lvl-3,
+.heading--lvl-4{
+  line-height: 1.23;
+  margin: 1em 0;
+}
+
+h5,
+h6,
+.heading--lvl-5,
+.heading--lvl-6{
+  margin: .5em 0;
+}
+
+p{
+  margin: 0 0 1em;
+}
+
+b{
+  font-weight: 700;
+}
+
+ul:not([class]):not([id]){
+  @include list-default(){
+    content: "";
+    vertical-align: middle;
+    width: .4em;
+    height: .4em;
+    border-radius: 50%;
+    background-color: $lightningYellow;
+    margin: 0 1.1em 0 -1.5em;
+    position: relative;
+    top: -.1em;
+  }
+}
+
+ol:not([class]):not([id]){
+  counter-reset: numeric-list;
+
+  @include list-default(){
+    vertical-align: baseline;
+    counter-increment: numeric-list;
+    content: counter(numeric-list)".";
+    font-weight: 700;
+    color: $lightningYellow;
+    width: 1.5em;
+    margin: 0 0 0 -1.5em;
+    position: relative;
+  }
+}
+
+a {
+  color: $base-link-color;
+  text-decoration-color: $base-link-color;
+  @include animate('text-decoration-color');
+
+  &:hover{
+    text-decoration-color: transparent;
+  }
+}
+
+table:not([class]):not([id]){
+  margin: 1.375em 0 1.375em 0;
+  border-collapse: collapse;
+  width: 100%;
+
+  tr:nth-child(odd) td{
+    background-color: #F5F9FC;
+  }
+
+  tr:nth-child(even) td{
+    background-color: #ECF3F8;
+  }
+
+  th{
+    font-size: .8125em;
+    line-height: 1.384;
+    padding: .769em 2em;
+    border-bottom: 2px solid $denim;
+    text-align: left;
+  }
+
+  td{
+    padding: 1em 1.625em;
+    position: relative;
+
+    &:not(:first-child)::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .9rem;
+      bottom: .9rem;
+      border-left: 2px dotted rgba($denim, .25);
+    }
+  }
+}

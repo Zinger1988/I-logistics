@@ -1,0 +1,48 @@
+.article{
+  font-weight: 300;
+
+  @include media(">=sm"){
+    font-size: 15px;
+  }
+
+  @include media(">=lg"){
+    font-size: 16px;
+  }
+
+  &__section{
+    margin-bottom: 4em;
+  }
+
+  &__image{
+    display: block;
+    margin: 1.375em 0;
+  }
+
+  &__image-item{
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  &__image-desc{
+    font-size: .875em;
+    font-weight: 300;
+    color: #666666;
+    margin: .428em 0;
+  }
+
+  &__blockquote{
+    margin: 1.875em 0;
+  }
+
+  &__socials{
+    padding: 3rem 0 4.25rem;
+    background: rgb(241,247,252);
+    background: linear-gradient(0deg, rgba(241,247,252,0) 0%, rgba(241,247,252,1) 100%);
+
+    @include media(">=md"){
+      padding: 5rem 0 7.4rem;
+    }
+  }
+
+}

@@ -1,0 +1,118 @@
+.footer{
+  background-color: $midnight;
+  color: $white;
+  padding-top: 4rem;
+
+  @include media(">=md"){
+    padding-top: 5rem;
+  }
+
+  &__main{
+    display: grid;
+    justify-items: center;
+    grid-gap: 4.5rem 0;
+    margin-bottom: 5rem;
+
+    @include media(">=md"){
+      grid-template-areas:
+              'logo logo'
+              'contacts about';
+      justify-items: unset;
+      grid-gap: 3.5rem 4.5rem;
+    }
+
+    @include media(">lg"){
+      grid-template-areas: 'logo contacts about';
+      grid-template-columns: 3fr 3fr 4fr;
+      grid-gap: 0 4rem;
+    }
+
+    @include media(">xl"){
+      grid-gap: 0 13rem;
+    }
+  }
+
+  &__group--logo{
+    @include media(">=md") {
+      grid-area: logo;
+      text-align: center;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px dotted rgba($white, .1);
+    }
+
+    @include media(">=lg") {
+      border-bottom: none;
+      padding-bottom: 0;
+      text-align: left;
+    }
+  }
+
+  &__group--contacts{
+    @include media(">=md") {
+      grid-area: contacts;
+    }
+  }
+
+  &__group--about{
+    @include media(">=md") {
+      grid-area: about;
+    }
+  }
+
+  &__logo{
+    width: 18rem;
+
+    @include media(">=lg") {
+      width: 20rem;
+    }
+
+    @include media(">=xl") {
+      width: 25rem;
+    }
+  }
+
+  &__heading{
+    color: $white;
+    margin-top: 0;
+
+    @include media(">=lg"){
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__contact-cell{
+    margin-bottom: 1em;
+    font-size: 1.4rem;
+
+    @include media(">=md"){
+      margin-bottom: 1.5em;
+    }
+
+    @include media(">=lg"){
+      font-size: 1.6rem;
+    }
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &__group-text{
+    @include media(">=md"){
+      font-size: 1.5rem;
+    }
+  }
+
+  &__copyrights{
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1;
+    color: rgba($white, .25);
+    background-color: $blueCharcoal;
+
+    @include media(">=md"){
+      font-size: 1.4rem;
+    }
+  }
+}

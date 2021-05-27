@@ -1,0 +1,24 @@
+.articles-grid{
+
+  &__container{
+    @include media(">=sm"){
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2rem;
+    }
+
+    @include media(">=lg"){
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 3.7rem 3rem;
+    }
+  }
+
+  &__article-card{
+    margin-bottom: 3rem;
+
+    @include media(">=sm"){
+      margin-bottom: 0;
+    }
+  }
+
+}

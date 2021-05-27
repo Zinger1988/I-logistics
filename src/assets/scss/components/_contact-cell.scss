@@ -1,0 +1,33 @@
+.contact-cell{
+  display: flex;
+  align-items: center;
+
+  &__icon{
+    font-size: 2em;
+    line-height: 1;
+    margin-right: .5em;
+    color: $lightningYellow;
+  }
+
+  &__pre{
+    font-size: .875em;
+    line-height: 1.214;
+    color: #226494;
+    margin-bottom: 2px;
+  }
+
+  &__main{
+    font: 1.125em/ 1.222 $headings-font-family;
+  }
+
+  &__link{
+    color: inherit;
+    text-decoration: none;
+    @include animate(color);
+
+    &:hover{
+      color: $lightningYellow;;
+    }
+  }
+
+}

@@ -1,0 +1,64 @@
+@include font("Montserrat", "montserrat-bold", "700", "normal");
+@include font("Montserrat", "montserrat-medium", "500", "normal");
+@include font("Montserrat", "montserrat-regular", "400", "normal");
+@include font("Montserrat", "montserrat-semibold", "600", "normal");
+@include font("Roboto", "roboto-light", "300", "normal");
+@include font("Roboto", "roboto-italic", "400", "italic");
+@include font("Roboto", "roboto-lightitalic", "300", "italic");
+@include font("Roboto", "roboto-regular", "400", "normal");
+@include font("Roboto", "roboto-bold", "700", "normal");
+//@include font("fontello", "fontello", "normal", "normal");
+
+@font-face {
+  font-family: 'fontello';
+  src:
+          url('../fonts/fontello.woff2?98266277') format('woff2'),
+          url('../fonts/fontello.woff?98266277') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon--"]:before, [class*=" icon--"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin: 0;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon--phone:before { content: '\e800'; } /* '' */
+.icon--quotes:before { content: '\e801'; } /* '' */
+.icon--telegram:before { content: '\e802'; } /* '' */
+.icon--twitter:before { content: '\e803'; } /* '' */
+.icon--viber:before { content: '\e804'; } /* '' */
+.icon--arr-bottom:before { content: '\e805'; } /* '' */
+.icon--arr-left:before { content: '\e806'; } /* '' */
+.icon--arr-right:before { content: '\e807'; } /* '' */
+.icon--arr-top:before { content: '\e808'; } /* '' */
+.icon--email:before { content: '\e809'; } /* '' */
+.icon--facebook:before { content: '\e80a'; } /* '' */

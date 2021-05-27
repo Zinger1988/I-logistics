@@ -1,0 +1,23 @@
+.container {
+  min-width: 36rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 125rem;
+
+  &--narrow{
+    max-width: 85rem;
+  }
+
+  @include media('>=sm'){
+    padding: 0 2rem;
+  }
+
+  @include media('>=lg'){
+    padding: 0 3rem;
+  }
+
+  @include media('>=xl'){
+    padding: 0 4rem;
+  }
+
+}

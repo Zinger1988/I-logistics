@@ -1,0 +1,58 @@
+.page-title{
+  background: #001C39 url("../img/public/page-title-bg.png") center / 200% auto no-repeat;
+  color: $white;
+  margin-bottom: 5rem;
+
+  @include media(">=md"){
+    background: #001C39 url("../img/public/page-title-bg.png") center / 149rem auto no-repeat;
+  }
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 20rem;
+
+    @include media(">=md"){
+      min-height: 23rem;
+    }
+
+    @include media(">=lg"){
+      min-height: 25rem;
+    }
+  }
+
+  &__heading{
+    color: $white;
+    margin: 0 0 .55em;
+    font-size: 2.5rem;
+    line-height: 1.222;
+    font-weight: 400;
+    position: relative;
+
+    @include media(">=md"){
+      font-size: 3rem;
+    }
+
+    @include media(">=lg"){
+      font-size: 3.5rem;
+    }
+
+    &::after{
+      content: "";
+      position: absolute;
+      left: calc(100% + 2rem);
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100vw;
+      border-top: 1px dotted rgba($denim, .4);
+
+      @include media(">=lg"){
+        left: calc(100% + 3.2rem);
+        border-top: 2px dotted rgba($denim, .4);
+      }
+    }
+  }
+
+}

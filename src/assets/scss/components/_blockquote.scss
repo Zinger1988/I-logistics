@@ -1,0 +1,26 @@
+.blockquote{
+  display: block;
+  padding: 1.875em 1.875em 1.875em 4.375em;
+  background-color: #F7F9FB;
+  border-left: 3px solid $lightningYellow;
+  position: relative;
+
+  &::before{
+    content: "\e801";
+    position: absolute;
+    left: 1.5em;
+    top: 1.5em;
+    font: 1.25em/1 'Fontello';
+    color: $regalGlue;
+  }
+
+  &__body{
+    font-style: italic;
+  }
+
+  &__cite{
+    font-style: normal;
+    font-weight: 600;
+    font-family: $headings-font-family;
+  }
+}

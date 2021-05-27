@@ -1,0 +1,26 @@
+@import "fonts";
+@import "typography";
+@import "forms";
+@import "helpers";
+
+html, body{
+  height: 100%;
+}
+
+html {
+  font-size: $rem-base;
+  font-family: $base-font-sans-serif;
+  line-height: $base-line-height;
+  color: $base-text-color;
+  overflow-x: hidden;
+}
+
+body{
+  font-size: $font-size-base;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
