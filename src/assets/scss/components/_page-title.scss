@@ -1,10 +1,10 @@
 .page-title{
-  background: #001C39 url("../img/public/page-title-bg.png") center / 200% auto no-repeat;
+  background: #00223B url("../img/public/page-title-bg.png") center / 200% auto no-repeat;
   color: $white;
   margin-bottom: 5rem;
 
   @include media(">=md"){
-    background: #001C39 url("../img/public/page-title-bg.png") center / 149rem auto no-repeat;
+    background: #00223B url("../img/public/page-title-bg.png") center / 149rem auto no-repeat;
   }
 
   &__container{

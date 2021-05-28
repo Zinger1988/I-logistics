@@ -58,25 +58,52 @@ $(document).ready(function () {
         init() {
             this.fixedHeader();
             this.typeDisplay();
+            this.menu();
+        },
+        menu(){
+
+            const button = $('.header__menu-btn');
+            const menu = $('.header__menu-list');
+            const menuTitle = $('.header__menu-title');
+
+            button.click(function () {
+                if(window.matchMedia('(max-width: 999px)').matches){
+                    $(this).toggleClass('header__menu-btn--active');
+                    siteJS.helpers.elemSlideToggle(menu, 'header__menu-list--active');
+                }
+            })
+
+            menuTitle.click(function () {
+                if(window.matchMedia('(max-width: 999px)').matches) {
+                    const sublist = $(this).next('.header__menu-sublist');
+
+                    $(this).toggleClass('header__menu-title--active');
+                    $('.header__menu-title').not($(this)).removeClass('header__menu-title--active');
+
+                    siteJS.helpers.elemSlideToggle(sublist, 'header__menu-sublist--active');
+                    siteJS.helpers.elemSlideUp($('.header__menu-sublist').not(sublist), 'header__menu-sublist--active');
+                }
+            })
+
         },
         fixedHeader() {
-            const header = $('.page__header');
+            const header = $('.header__menu');
             const headerHeight = header.outerHeight();
 
             $(window).scroll(function () {
-                if ($(this).scrollTop() > 50) {
-                    $(document.body).css('padding-top', headerHeight + 'px');
-                    header.addClass('page__header--fixed');
+                if ($(this).scrollTop() > 50 && window.matchMedia('(min-width: 1000px)').matches) {
+                    $('.header').css('padding-bottom', headerHeight + 'px');
+                    header.addClass('header__menu--fixed');
                 } else {
-                    header.removeClass('page__header--fixed');
-                    $(document.body).attr('style', '');
+                    header.removeClass('header__menu--fixed');
+                    $('.header').attr('style', '');
                 }
             });
 
             $(window).on('load', function () {
-                if (header.offset().top > 50) {
-                    $(document.body).css('padding-top', headerHeight + 'px');
-                    header.addClass('page__header--fixed');
+                if (header.offset().top > 50 && window.matchMedia('(min-width: 1000px)').matches) {
+                    $('.header').css('padding-bottom', headerHeight + 'px');
+                    header.addClass('header__menu--fixed');
                 }
             });
         },
