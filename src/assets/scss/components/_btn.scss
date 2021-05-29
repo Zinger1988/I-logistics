@@ -1,0 +1,19 @@
+.btn{
+  @extend %buttonreset;
+  display: inline-flex;
+  font: 1.1rem/1.3 $headings-font-family;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  padding: 1.4em 2.2em;
+  border-radius: 4px;
+
+  &--default{
+    color: $white;
+    background-color: $denim;
+    @include animate(background-color);
+
+    &:hover{
+      background-color: lighten($denim, 10%);
+    }
+  }
+}

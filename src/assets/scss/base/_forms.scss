@@ -1,4 +1,5 @@
 // forms
+
 form,
 fieldset {
   margin: 0;
@@ -6,33 +7,13 @@ fieldset {
   border-style: none;
 }
 
-input[type='text'],
-input[type='password'],
-input[type='date'],
-input[type='datetime'],
-input[type='email'],
-input[type='number'],
-input[type='search'],
-input[type='tel'],
-input[type='time'],
-input[type='month'],
-input[type='week']{
+.form-input{
   @extend %nowrap;
 }
 
-input[type='text'],
-input[type='password'],
-input[type='date'],
-input[type='datetime'],
-input[type='email'],
-input[type='number'],
-input[type='search'],
-input[type='tel'],
-input[type='time'],
-input[type='month'],
-input[type='week'],
-select,
-textarea {
+.form-input,
+.form-select,
+.form-textarea {
   -moz-appearance: textfield;
   border: 1px solid $form-element-border-color;
   padding: $form-element-padding;
@@ -51,7 +32,7 @@ textarea {
 
   @include placeholder {
     color: $placeholder-color;
-    opacity: 1;
+    opacity: .7;
     @include animate(opacity);
   }
 
@@ -65,19 +46,15 @@ textarea {
   }
 }
 
-select {
+.form-select {
   border-radius: 3px;
 }
 
-textarea {
+.form-textarea {
   resize: vertical;
 }
 
-button,
-input[type='button'],
-input[type='reset'],
-input[type='file'],
-input[type='submit'] {
+.btn {
   -webkit-appearance: none;
   cursor: pointer;
 }

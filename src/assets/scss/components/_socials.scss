@@ -1,5 +1,7 @@
 .socials{
 
+  $this: &;
+
   &__title{
     font: 600 1.3rem/1.571 $headings-font-family;
     margin: 0 0 .7857em;
@@ -79,5 +81,26 @@
 
   &__item-icon{
     font-size: 1.538em;
+  }
+
+  &--circle{
+
+    #{$this}__holder{
+      display: flex;
+      align-items: center;
+      border-radius: 0;
+    }
+
+    #{$this}__item{
+      display: block;
+      margin-right: 1em;
+      border-radius: 50%;
+    }
+
+    #{$this}__item-icon{
+      font-size: 1.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 }
