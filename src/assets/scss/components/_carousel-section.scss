@@ -67,8 +67,8 @@
 
     .swiper-slide{
       padding: 0 10px;
-      height: auto;
-      display: flex;
+      //height: auto;
+      //display: flex;
 
       @include media(">=lg"){
         padding: 0 15px;

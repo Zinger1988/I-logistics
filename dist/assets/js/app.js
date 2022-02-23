@@ -43,17 +43,6 @@ $(document).ready(function () {
     let siteJS = {
         onload: () => {
             siteJS.init();
-            window.addEventListener("resize", siteJS.resizeThrottler, false);
-        },
-        resizeTimeout: null,
-        resizeThrottler: function(){
-            if ( !siteJS.resizeTimeout ) {
-                siteJS.resizeTimeout = setTimeout(function() {
-                    siteJS.resizeTimeout = null;
-                    siteJS.textBlockOverflow();
-                    siteJS.productGrid();
-                }, 500);
-            }
         },
         init() {
             this.fixedHeader();

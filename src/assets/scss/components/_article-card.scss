@@ -55,7 +55,9 @@
   &__hover-icon{
     width: 4rem;
     height: 4rem;
-    line-height: 3.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     border-radius: 50%;
     border: 1px solid rgba($white,.3);
@@ -64,7 +66,6 @@
     @include media(">=md"){
       width: 5rem;
       height: 5rem;
-      line-height: 4.8rem;
       font-size: 1.25rem;
     }
   }
